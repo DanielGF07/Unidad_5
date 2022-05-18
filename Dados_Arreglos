@@ -1,3 +1,32 @@
-qe
-re
-e
+import java.util.Random;
+
+public class Dados_Arreglos {
+
+    public static void main(String[] args) {
+        
+        //se genera numeros aleatorios y se guarda en el arreglo numerosAlleatorios
+        
+        Random numerosAleatorios = new Random();
+        
+        //se crea arreglo para el control de interaccion
+        
+        int[]frecuencia = new int[7];
+        
+        //se lanza el dado 60 veces
+        
+        for(int tiro=1;tiro<=60;tiro++){
+            ++frecuencia[1+numerosAleatorios.nextInt(6)];
+            System.out.printf("%s%10s/n","CARA","FRECUENCIA");
+            
+            //Imprimir el valor de cada elemento
+            
+            for (int cara=1;cara<frecuencia.length;cara++){
+                System.out.printf("%4d%10d\n",cara,frecuencia[cara]);
+            }
+         
+           
+        }
+        
+    }
+    
+}
