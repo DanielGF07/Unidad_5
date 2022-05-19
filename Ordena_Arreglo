@@ -44,7 +44,7 @@ public class Ordena_Arreglo {
         
         //Preguntar si queremos ORDENAR
         
-        System.out.println(": ¿Desea ordenar los numeros? s\n");
+        System.out.println(": ¡¿Desea ordenar los numeros?! s\n");
         Scanner sc2 = new Scanner(System.in);
         String res = sc2.nextLine();
         
