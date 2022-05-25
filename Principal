@@ -54,7 +54,7 @@ System.out.println("El dato convertido se multiplica por 5: "+convertido*5);
         
         Scanner teclado = new Scanner(System.in);
         datoLeido = teclado.nextLine();
-        
+        System.out.println("Introdusca un valor: ");
         if(datoLeido.length()>6){
             datoAux = "Adios";
         }
