@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+/*
+todas las excepciones se derivan de la clase exception. Hay 2 tippos de exce´ciones
+1: las excepciones propias de la clase exception
+2: las excepciones desarrolladas por usted
+try, (instrucciones) cactch(atraoa los errores), finally
+
+/**
+ *
+ * @author invitado2
+ */
+public class Principal {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        primeraExcepcion();
+   
+    }
+    
+    //Se crea metodo para trata una exception
+    
+    public static void primeraExcepcion(){   
+        String dato=" ";
+    int convertido=0;
+    
+    Scanner teclado = new Scanner(System.in);
+    System.out.println("Introduzca un numero, se lee como cadena y se convierte");
+    dato=teclado.nextLine();
+    
+    /*Cuando se requiere convertir la cadena que no es un numero a entero se producira un ERROR
+    */
+    //se crea la excpecion
+    
+    try{
+    convertido=Integer.parseInt(dato); 
+}catch(Exception e){ //se atrapan los errores
+    System.err.println("El dato leido no es un numero.... ");
+}finally{
+    System.out.println("Se ejecuta haya o no excepciones");
+}
+
+System.out.println("El dato convertido se multiplica por 5: "+convertido*5);
+}
+    }
+    
