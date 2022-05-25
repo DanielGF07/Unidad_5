@@ -44,5 +44,32 @@ public class Principal {
 
 System.out.println("El dato convertido se multiplica por 5: "+convertido*5);
 }
-    }
+// Se crea metodo para convinar excepciones
+
+ 
+    public static void combinandoExcepciones(){
+        String datoLeido="";
+        String datoAux="";
+        int datoConvertido;
+        
+        Scanner teclado = new Scanner(System.in);
+        datoLeido = teclado.nextLine();
+        
+        if(datoLeido.length()>6){
+            datoAux = "Adios";
+        }
+        //se trata la excepcion generada en caso de que no cumpla con la condicio
+        
+        try{ //Se generan instrucciones
+            int longitud = datoAux.length(); //puede generar un error tipo: NulllPointer
+            datoConvertido = Integer.parseInt(datoAux);
+        }
+        catch(NullPointerException e){ //se atrapa el error
+           System.err.println("Trabajando con un valor NULO");
+        }
+        catch(NumberFormatException e){
+            System.out.println("No se epudo realizar la conversion");
+        }
+}
+}
     
