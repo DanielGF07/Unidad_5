@@ -1,0 +1,35 @@
+
+/*
+Se efectua la division entre dos numeros ys e tiene consideracion lo sigiente
+1: Dividir entre 0 que muestre el mensaje *A ocurrido una excepcion
+2: Al no enctontrar mas elementos que muestre *Elemento no existe
+
+/**
+ *
+ * @author invitado
+ */
+public class Exc_Arreglo {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        //se declara los dos arreglos (nums / denom)
+        int nums[]=(4,8,12,16,32,64,128,256,512);
+        int denom[]=(2,0,4.4,0,8);
+        
+        //Se crea ciclo para leer el totat de elementos del arreglo
+        
+        for(int i=0;i<nums.length;i++){
+        try{
+            System.out.println(nums[i]+"/"+denom[i]+"es"+nums[i]/denom[i]);
+        }catch(ArrayIndexOutOfBoundsException exc){
+            //se captura la excepcion
+            System.err.println("No se encontro ningun elemento");
+        }
+        catch(Throwable exc){
+            System.out.println("Alguna excepcion ocurrio");
+        }
+        }
+}
+}
