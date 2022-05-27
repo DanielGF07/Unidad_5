@@ -1,0 +1,41 @@
+
+/*
+ Se llama metodo constructor creado en la java class excepcion
+
+/**
+ *
+ * @author invitado
+ */
+public class Principal_Herencia {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        validaPropia();
+    }
+    
+    //Se crea el metodo que atrapa la Excepcion
+    public static void validaPropia(){
+        //Por dar determinado valor
+        
+        int n=5;
+        
+        //Se inicia el tratamiento de la excepcion
+        
+        try{
+            minimo(n);
+            System.out.println("ES mayor a 10");
+        }catch(MiExcepcion e){
+            System.err.println("Numero no es util");
+        }
+    }
+    
+    //Se crea metodo que lanza la excepcion
+    
+    public static void minimo(int numero)throws MiExcepcion{
+        if(numero<=10){
+            throw new MiExcepcion("Nesesita un numero mayor s 10");
+        }
+    }
+}
