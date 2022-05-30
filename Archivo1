@@ -1,0 +1,37 @@
+
+import java.io.File;
+
+/*
+Se trabaja con clase predefiniida FILE Y algunos de sus metodos
+canExecute(): devuelve un true o false en funcion de si el archivo
+canRead(): si el arcivo tiene acceso a modo lectura
+canWrite(): si permite escribir en el archivo
+createNewFile(): crea un nuevo archivo vacio con el nombre que se le indica
+delete(): borra el archivo
+exists(): determina si el archivo existe
+getName(): obtiene el nombre del archivo
+getParent(): devuelve una cadena con la ruta o carpeta madrre actual
+isDirectory(): indica si el objeto actual representa una carpeta
+isFile(): indica si el objeto actual representa un archivo
+isHidden(): si es un elemento oculto en sistema de archivos
+lenght(): tamaño del archivo en bytes
+list(): nombres de los archivos y carpetas hijos de una carpeta
+listFiles(): devuelve los objetos file para casda archivo
+mkdir(): crea una carpeta
+renameTo(): renombra el archivo o carpeta
+
+/**
+ *
+ * @author invitado
+ */
+public class Archivo1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        File archivo = new File ("C:\\Users\\Daniel Gonzalez\\Desktop\\Datos.txt");
+        System.out.println(archivo.exists());
+    }
+    
+}
