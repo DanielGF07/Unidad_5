@@ -32,6 +32,28 @@ public class Archivo1 {
     public static void main(String[] args) {
         File archivo = new File ("C:\\Users\\Daniel Gonzalez\\Desktop\\Datos.txt");
         System.out.println(archivo.exists());
+         
+        // Para saber si es directorio devuelve f/v
+        System.out.println(archivo.isDirectory());
+        //para saber la fecha de modificacion
+        System.out.println("La ultima fecha de modificacion es: "+archivo.lastModified());
+        //Para saber el nombre de archivo
+        System.out.println("El nombre del archivo es: "+archivo.getName());
+        //Para conocer la ruta del archivo
+        System.out.println("La ruta del archivo es: "+archivo.getPath());
+        //para conocer el tamaño del archivo en bytes
+        System.out.println("El tamaño del archivo"+archivo.length());
+        //Para saber si el archivo es de lectura
+        System.out.println("Tipo de archivo:"+archivo.canRead());
+        //para saber si el archivo es de escritura
+        System.out.println("Tipo de archivo:"+archivo.canWrite());
+        //Para borrar el archivo, comentar este metodo en la primer corrida
+        // System.err.println("Archivo eliminado "+archivo.delete());
+        //Para el caso de veriificar el contenido de un directorio es necesario crear otro objeto ARCHIVO2
+        //Y Crear en escritorio una carpeta nombrada: MiCarpeta y adjuntar otro dos archivo txt
+        for(String string:archivo2.list()){
+            System.out.println(string); 
+        
     }
     
 }
