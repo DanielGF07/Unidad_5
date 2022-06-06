@@ -1,0 +1,35 @@
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+/*
+Se accede al archivo creado para visualizar el contenido de este asi como el ERROR 
+en caso de que el archivo no exista, entonces se debe utilizar una excepcion 
+para que atape el error y le muestre al usuario el mensaje "Ha ocurrido un ERROR"
+
+/**
+ *
+ * @author invitado
+ */
+
+public class ContenidoFile {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        try{
+            File contenido = new File("Datos.txt");
+            File contenido2 = new File("C:\\Users\\Daniel Gonzalez\\Desktop\\Datos.txt");
+            
+            Scanner myReader = new Scanner(contenido);
+             while(myReader.hasNextLine()){
+                 String datos = myReader.nextLine();
+                 System.out.println(datos);
+             }
+             myReader.close();
+        }catch(FileNotFoundException e){
+            System.err.println("Ha ocurrido un ERROR");
+        }
+    }
+}
