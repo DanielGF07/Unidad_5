@@ -1,0 +1,42 @@
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+/*
+S eescribe sobre archivo creado desde java
+
+/**
+ *
+ * @author invitado
+ */
+public class EscribirArchivo {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) throws FileNotFoundException {
+        try{
+            FileWriter escritura = new FileWriter("archivo_1.txt");
+            escritura.write("Clase de POO");
+            escritura.close();
+            System.out.println("Hola soy DG");
+   
+        }catch(IOException e){
+            System.err.println("Ha ocurrido un ERROR");
+            e.printStackTrace();
+        }
+        File contenido = new File("Datos.txt");
+        File contenido2 = new File("C:\\Users\\Daniel Gonzalez\\Desktop\\Datos.txt");
+            
+            Scanner myReader = new Scanner(contenido);
+             while(myReader.hasNextLine()){
+                 String datos = myReader.nextLine();
+                 System.out.println(datos);
+        System.out.println("Contenido Archivo: ");
+    }
+    
+}
+}
